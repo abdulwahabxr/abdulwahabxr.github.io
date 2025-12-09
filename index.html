@@ -1,0 +1,254 @@
+<!--
+  abdulwahabxr.com - Single-file GitHub Pages-ready portfolio
+  Instructions:
+  1. Save this file as `index.html` at the root of a repo named `abdulwahabxr.github.io`.
+  2. Replace placeholders (NAME, BIO, PROJECTS) with your content.
+  3. Push to GitHub main branch; enable Pages (root) if needed.
+  4. For custom domain, set repo Settings → Pages → Custom domain to abdulwahabxr.com and add DNS A and CNAME records as previously instructed.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdul Wahab — XR & Unity Engineer</title>
+  <meta name="description" content="Abdul Wahab — XR & Unity Engineer. Portfolio: XR, AR, Unity, AI integrations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07070a; --card:#0d0d12; --muted:#9aa3b2; --accent1:#6ef; --accent2:#b26fff;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --glass-border: rgba(110,110,255,0.08);
+      --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(110,111,255,0.06), transparent),radial-gradient(900px 400px at 90% 90%, rgba(178,111,255,0.04), transparent),var(--bg);color:#eaf0ff}
+    a{color:inherit;text-decoration:none}
+    .container{width:94%;max-width:var(--maxw);margin:0 auto}
+
+    /* Top nav */
+    header{position:fixed;left:0;right:0;top:16px;z-index:60}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px);border:1px solid var(--glass-border)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#07102b;box-shadow:0 6px 18px rgba(66,66,88,0.25)}
+    .navlinks{display:flex;gap:12px;align-items:center}
+    .navlinks a{padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+    .navlinks a:hover{color:var(--accent1);box-shadow:0 6px 18px rgba(110,111,255,0.06);transform:translateY(-2px)}
+
+    /* Hero */
+    .hero{min-height:84vh;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding-top:40px}
+    .hero-left{padding:80px 0}
+    h1{font-size:clamp(26px,4.4vw,44px);margin:0 0 10px;line-height:1.02}
+    h1 .accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    p.lead{color:var(--muted);margin:0 0 20px;max-width:60ch}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#07102b}
+
+    /* Quick stats */
+    .stats{display:flex;gap:12px;margin-top:24px}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;min-width:100px;border:1px solid rgba(255,255,255,0.02)}
+    .stat b{display:block;font-size:18px}
+    .stat small{color:var(--muted)}
+
+    /* Card column */
+    .hero-right{align-self:center}
+    .card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:18px;border-radius:14px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(6,8,20,0.7)}
+    .project-thumb{height:220px;border-radius:10px;background:linear-gradient(135deg, rgba(110,111,255,0.14), rgba(178,111,255,0.08));display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* Projects */
+    section.projects{padding:44px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .proj{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .proj h3{margin:10px 0 6px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{padding:6px 8px;border-radius:8px;font-size:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+
+    /* About */
+    section.about{padding:44px 0}
+    .timeline{display:flex;flex-direction:column;gap:10px}
+    .time-item{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+
+    /* Contact */
+    section.contact{padding:44px 0}
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
+
+    footer{padding:28px 0;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;gap:18px}
+      header{top:10px}
+      .hero-left{padding:16px 0}
+      .navlinks{display:none}
+    }
+
+    /* subtle animations */
+    .fade-up{opacity:0;transform:translateY(8px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+    .in-view{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">AW</div>
+        <div>
+          <div style="font-weight:800">Abdul Wahab</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">XR & Unity Engineer</div>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding-top:90px">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="fade-up" style="max-width:76ch">
+          <h1>Abdul Wahab — <span class="accent">XR & Unity Engineer</span></h1>
+          <p class="lead">I design and build immersive AR/VR experiences, real-time 3D apps, and AI-integrated XR prototypes for mobile and headsets. I focus on performance, UX and practical demos that clients can interact with.</p>
+
+          <div class="cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="stats" style="margin-top:22px">
+            <div class="stat"><b>9+</b><small>Years Experience</small></div>
+            <div class="stat"><b>XR</b><small>Unity · ARCore · ARKit</small></div>
+            <div class="stat"><b>Platforms</b><small>Mobile · WebXR · Headsets</small></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card fade-up">
+          <div class="project-thumb">Interactive XR Demo</div>
+          <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">HoloPose — AR Prototype</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">Realtime body tracking + AR overlay (Unity)</div>
+            </div>
+            <div style="text-align:right;color:var(--muted)"><div style="font-weight:800">Mobile</div><div style="font-size:12px">Unity · ARCore</div></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:14px">
+        <h2 style="margin:0">Selected Projects</h2>
+        <div style="color:var(--muted);font-size:14px">Filter: <span style="font-weight:700">XR</span> · AR · AI</div>
+      </div>
+
+      <div class="grid">
+        <article class="proj fade-up">
+          <div style="height:140px;border-radius:8px;background:linear-gradient(135deg,#12203a66, #0f123066);display:flex;align-items:center;justify-content:center;font-weight:700">Project 1 Thumbnail</div>
+          <h3>HoloPose</h3>
+          <p style="margin:6px 0;color:var(--muted);font-size:14px">Realtime pose estimation and AR overlay for fitness and rehabilitation.</p>
+          <div class="badges"><span class="badge">Unity</span><span class="badge">ARCore</span><span class="badge">ML</span></div>
+        </article>
+
+        <article class="proj fade-up">
+          <div style="height:140px;border-radius:8px;background:linear-gradient(135deg,#12203a66, #0f123066);display:flex;align-items:center;justify-content:center;font-weight:700">Project 2</div>
+          <h3>XR Showcase</h3>
+          <p style="margin:6px 0;color:var(--muted);font-size:14px">Interactive product visualizer using WebXR and GLTF models.</p>
+          <div class="badges"><span class="badge">WebXR</span><span class="badge">Three.js</span></div>
+        </article>
+
+        <article class="proj fade-up">
+          <div style="height:140px;border-radius:8px;background:linear-gradient(135deg,#12203a66, #0f123066);display:flex;align-items:center;justify-content:center;font-weight:700">Project 3</div>
+          <h3>Spatial Chat</h3>
+          <p style="margin:6px 0;color:var(--muted);font-size:14px">Multiplayer VR room with voice spatialization and avatars.</p>
+          <div class="badges"><span class="badge">Unity</span><span class="badge">Photon</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">I am a Unity developer focused on XR experiences: AR prototypes, VR interactives and WebXR demos. I integrate AI services for contextual interactions and build performant apps that run on mobile and headset platforms.</p>
+
+          <div style="margin-top:12px">
+            <strong>Skills</strong>
+            <div class="badges" style="margin-top:8px">
+              <span class="badge">Unity</span><span class="badge">C#</span><span class="badge">ARCore</span><span class="badge">ARKit</span><span class="badge">Three.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:260px">
+          <strong>Career</strong>
+          <div class="timeline" style="margin-top:8px">
+            <div class="time-item"><b>2022–Present</b><div style="color:var(--muted);font-size:13px">Freelance XR & Unity projects</div></div>
+            <div class="time-item"><b>2018–2022</b><div style="color:var(--muted);font-size:13px">Unity dev — interactive apps</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:12px">
+        <div>
+          <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea name="message" rows="6" placeholder="Message" required></textarea>
+            <div style="margin-top:8px"><button class="btn primary" type="submit">Send</button></div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <div style="font-weight:700">Get in touch</div>
+          <div style="color:var(--muted);margin-top:8px">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+          <div style="color:var(--muted);margin-top:8px">GitHub: <a href="https://github.com/abdulwahabxr" target="_blank">@abdulwahabxr</a></div>
+          <div style="color:var(--muted);margin-top:8px">LinkedIn: <a href="#" target="_blank">profile</a></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Or scan the QR on your phone to open this page.</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer style="margin-top:36px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>&copy; <span id="year"></span> Abdul Wahab — XR & Unity</div>
+        <div style="color:var(--muted)">Built with · HTML · CSS · JS · GitHub Pages</div>
+      </div>
+    </footer>
+  </main>
+
+  <canvas id="bg-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.9"></canvas>
+
+  <script>
+    // small runtime: set year, smooth reveal, simple particle grid
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // reveal on scroll
+    const obs = new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('in-view')}),{threshold:0.12});
+    document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+    // canvas subtle particles
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+    addEventListener('resize',resize);resize();
+    const pts=[];for(let x=0;x<innerWidth; x+=60){for(let y=0;y<innerHeight; y+=60){pts.push({x:x+Math.random()*20,y:y+Math.random()*20, o:Math.random()*0.6+0.15})}}
+    function frame(){ctx.clearRect(0,0,canvas.width,canvas.height);for(let p of pts){ctx.beginPath();ctx.fillStyle='rgba(110,111,255,'+p.o*0.12+')';ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()}requestAnimationFrame(frame)}frame();
+
+    // simple smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t) t.scrollIntoView({behavior:'smooth',block:'start'})}))
+  </script>
+</body>
+</html>
