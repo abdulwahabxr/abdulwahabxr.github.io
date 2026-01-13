@@ -21,6 +21,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   });
 });
 
+// ===== Scroll to Top Button =====
+const scrollBtn = document.getElementById("scroll-top-btn");
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = (window.scrollY > 300) ? "block" : "none";
+});
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // ===== Hero Canvas Animation =====
 const canvas = document.getElementById("hero-canvas");
 const ctx = canvas.getContext("2d");
