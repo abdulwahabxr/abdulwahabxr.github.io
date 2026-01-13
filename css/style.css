@@ -89,11 +89,11 @@ nav a:hover {
 }
 
 /* ===== Hero ===== */
-.hero {
+/*.hero {
   min-height: 80vh;
   display: flex;
   align-items: center;
-}
+}*/
 
 .hero span {
   color: var(--green);
@@ -220,5 +220,48 @@ nav a:hover {
 
   #menu-btn {
     display: block;
+  }
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+}
+
+.about-text {
+  margin-top: 1rem;
+  color: var(--text-main);
+}
+
+.about-highlight {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.about-highlight ul {
+  list-style: none;
+}
+
+.about-highlight li {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.about-highlight li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
