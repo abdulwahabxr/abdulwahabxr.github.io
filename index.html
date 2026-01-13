@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>XR Portfolio</title>
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -27,171 +27,142 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero">
-  <div class="container hero-content fade-in">
-    <h2 class="hero-title">
-      XR Engineer
-    </h2>
-
-    <p class="hero-subtitle">
-      Unity • AR / VR / MR • Multiplayer • AI
-    </p>
-
-    <p class="hero-desc">
-      I build immersive, real-time experiences at the intersection of
-      extended reality, game systems, and intelligent interaction.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn" href="#projects">View Projects</a>
-      <a class="btn btn-outline" href="#contact">Contact</a>
+    <canvas id="hero-canvas"></canvas>
+    <div class="container hero-content fade-in">
+      <h2 class="hero-title">XR Engineer</h2>
+      <p class="hero-subtitle">Unity • AR / VR / MR • Multiplayer • AI</p>
+      <p class="hero-desc">
+        I build immersive, real-time experiences at the intersection of
+        extended reality, game systems, and intelligent interaction.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===== About ===== -->
   <section id="about" class="section fade-in">
-  <div class="container about-grid">
-    <div>
-      <h3>About</h3>
-      <p class="about-text">
-        I am an XR Engineer specializing in building immersive real-time
-        applications using Unity. My work spans augmented, virtual, and
-        mixed reality experiences with a strong focus on performance,
-        interaction design, and system architecture.
-      </p>
-
-      <p class="about-text">
-        I have hands-on experience developing multiplayer systems,
-        integrating AI-driven behaviors, and designing scalable gameplay
-        and simulation frameworks. I enjoy solving complex technical
-        problems at the intersection of XR, networking, and intelligent
-        systems.
-      </p>
+    <div class="container about-grid">
+      <div>
+        <h3>About</h3>
+        <p class="about-text">
+          I am an XR Engineer specializing in building immersive real-time
+          applications using Unity. My work spans AR, VR, and MR experiences
+          with a strong focus on performance, interaction design, and system architecture.
+        </p>
+        <p class="about-text">
+          I develop multiplayer systems, integrate AI-driven behaviors, and design scalable gameplay
+          and simulation frameworks.
+        </p>
+      </div>
+      <div class="about-highlight">
+        <ul>
+          <li>Unity-based XR development (AR / VR / MR)</li>
+          <li>Multiplayer & real-time networking concepts</li>
+          <li>AI-assisted gameplay & interaction systems</li>
+          <li>Performance-focused engineering mindset</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="about-highlight">
-      <ul>
-        <li>Unity-based XR development (AR / VR / MR)</li>
-        <li>Multiplayer & real-time networking concepts</li>
-        <li>AI-assisted gameplay & interaction systems</li>
-        <li>Performance-focused engineering mindset</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===== Projects ===== -->
   <section id="projects" class="section fade-in">
-  <div class="container">
-    <h3>Projects</h3>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h4>Multiplayer VR Experience</h4>
-        <p class="project-desc">
-          Real-time multiplayer VR application built in Unity with
-          synchronized interactions and shared environments.
-        </p>
-        <p class="project-tech">
-          Unity · VR · Networking · C#
-        </p>
+    <div class="container">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Multiplayer VR Experience</h4>
+          <p class="project-desc">
+            Real-time multiplayer VR application built in Unity with synchronized interactions and shared environments.
+          </p>
+          <p class="project-tech">Unity · VR · Networking · C#</p>
+        </div>
+        <div class="project-card">
+          <h4>AR Interactive System</h4>
+          <p class="project-desc">
+            Mobile AR experience focused on spatial interaction and real-world object alignment.
+          </p>
+          <p class="project-tech">Unity · AR · Mobile · XR Toolkit</p>
+        </div>
+        <div class="project-card">
+          <h4>AI-Driven Simulation</h4>
+          <p class="project-desc">
+            Intelligent agent behaviors using rule-based logic and AI-assisted decision-making inside immersive environments.
+          </p>
+          <p class="project-tech">Unity · AI · Simulation · C#</p>
+        </div>
       </div>
-
-      <div class="project-card">
-        <h4>AR Interactive System</h4>
-        <p class="project-desc">
-          Mobile AR experience focused on spatial interaction and
-          real-world object alignment.
-        </p>
-        <p class="project-tech">
-          Unity · AR · Mobile · XR Toolkit
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h4>AI-Driven Simulation</h4>
-        <p class="project-desc">
-          Intelligent agent behaviors using rule-based logic and
-          AI-assisted decision-making inside immersive environments.
-        </p>
-        <p class="project-tech">
-          Unity · AI · Simulation · C#
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ===== Skills ===== -->
   <section id="skills" class="section fade-in">
-  <div class="container">
-    <h3>Skills</h3>
-
-    <div class="skills-grid">
-
-      <div class="skill-card">
-        <h4>XR & Immersive</h4>
-        <ul>
-          <li>AR / VR / MR</li>
-          <li>XR Interaction Design</li>
-          <li>Spatial Computing</li>
-          <li>Device Integration</li>
-        </ul>
+    <div class="container">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>XR & Immersive</h4>
+          <ul>
+            <li>AR / VR / MR</li>
+            <li>XR Interaction Design</li>
+            <li>Spatial Computing</li>
+            <li>Device Integration</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Engine & Tools</h4>
+          <ul>
+            <li>Unity Engine</li>
+            <li>C# Programming</li>
+            <li>XR Toolkit</li>
+            <li>Shader Basics</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>Multiplayer & Systems</h4>
+          <ul>
+            <li>Real-time Networking</li>
+            <li>State Synchronization</li>
+            <li>Client / Server Concepts</li>
+            <li>Performance Optimization</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h4>AI & Logic</h4>
+          <ul>
+            <li>Agent Behaviors</li>
+            <li>Rule-Based Systems</li>
+            <li>AI-Assisted Gameplay</li>
+            <li>Simulation Logic</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="skill-card">
-        <h4>Engine & Tools</h4>
-        <ul>
-          <li>Unity Engine</li>
-          <li>C# Programming</li>
-          <li>XR Toolkit</li>
-          <li>Shader Basics</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <h4>Multiplayer & Systems</h4>
-        <ul>
-          <li>Real-time Networking</li>
-          <li>State Synchronization</li>
-          <li>Client / Server Concepts</li>
-          <li>Performance Optimization</li>
-        </ul>
-      </div>
-
-      <div class="skill-card">
-        <h4>AI & Logic</h4>
-        <ul>
-          <li>Agent Behaviors</li>
-          <li>Rule-Based Systems</li>
-          <li>AI-Assisted Gameplay</li>
-          <li>Simulation Logic</li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== Contact ===== -->
-<section id="contact" class="section fade-in">
-  <div class="container contact-grid">
-    <h3>Contact</h3>
-    <p class="contact-text">
-      Interested in collaborating or discussing XR projects? Reach out via email or LinkedIn.
-    </p>
-
-    <div class="contact-links">
-      <a class="btn" href="mailto:your@email.com">Email Me</a>
-      <a class="btn btn-outline" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a class="btn btn-outline" href="https://github.com/yourusername" target="_blank">GitHub</a>
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section fade-in">
+    <div class="container contact-grid">
+      <h3>Contact</h3>
+      <p class="contact-text">
+        Interested in collaborating or discussing XR projects? Reach out via email or LinkedIn.
+      </p>
+      <div class="contact-links">
+        <a class="btn" href="mailto:your@email.com">Email Me</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a class="btn btn-outline" href="https://github.com/yourusername" target="_blank">GitHub</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== Footer ===== -->
-<footer class="footer fade-in">
-  <p>© 2026 Your Name | Built with Unity, XR & Web Tech</p>
-</footer>
+  <!-- ===== Footer ===== -->
+  <footer class="footer fade-in">
+    <p>© 2026 Your Name | Built with Unity, XR & Web Tech</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
