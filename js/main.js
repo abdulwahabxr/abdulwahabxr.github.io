@@ -6,6 +6,7 @@ menuBtn.addEventListener("click", () => {
   navMenu.classList.toggle("show");
 });
 
+// Fade-in on scroll
 const faders = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(entries => {
