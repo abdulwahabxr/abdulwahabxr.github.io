@@ -3,172 +3,279 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XR Portfolio</title>
+  <title>Abdul Wahab — Unity Developer &amp; AR Specialist</title>
+  <meta name="description" content="Abdul Wahab — Unity mobile game developer with 7 years of experience and an AR/VR specialist building immersive training and simulation apps." />
+  <meta name="theme-color" content="#0a0d0a" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdul Wahab — Unity Developer &amp; AR Specialist" />
+  <meta property="og:description" content="7 years of Unity mobile game development · 2 years building AR training &amp; simulation experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdulwahabxr.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ===== Header ===== -->
-  <header class="header">
-    <div class="container nav">
-      <h1 class="logo">ABDUL WAHAB</h1>
-
-      <nav id="nav-menu">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button id="menu-btn">☰</button>
-    </div>
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__brand">
+      <span class="nav__bracket">[</span>AW<span class="nav__bracket">]</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <canvas id="hero-canvas"></canvas>
-    <div class="container hero-content fade-in">
-      <h2 class="hero-title">XR Engineer</h2>
-      <p class="hero-subtitle">Unity • AR / VR / MR • Multiplayer • AI</p>
-      <p class="hero-desc">
-        I build immersive, real-time experiences at the intersection of
-        extended reality, game systems, and intelligent interaction.
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">// initializing build&hellip;</p>
+      <h1 class="hero__name">Abdul&nbsp;Wahab</h1>
+      <p class="hero__title">
+        <span>Unity Developer</span>
+        <span class="hero__pipe">|</span>
+        <span>AR Specialist</span>
       </p>
-      <div class="hero-actions">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn btn-outline" href="#contact">Contact</a>
+      <p class="hero__tagline">
+        I build performant mobile games and immersive AR/VR experiences —
+        from twitchy game loops to real-world training simulations.
+      </p>
+      <div class="hero__actions">
+        <a href="#work" class="btn btn--primary">View Work</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
       </div>
+      <ul class="hero__stats" aria-label="Highlights">
+        <li><span class="stat__num" data-count="7">0</span><span class="stat__label">yrs Unity dev</span></li>
+        <li><span class="stat__num" data-count="2">0</span><span class="stat__label">yrs AR/VR</span></li>
+        <li><span class="stat__num" data-count="10" data-suffix="+">0</span><span class="stat__label">shipped titles</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ===== About ===== -->
-  <section id="about" class="section fade-in">
-    <div class="container about-grid">
-      <div>
-        <h3>About</h3>
-        <p class="about-text">
-          I am an XR Engineer specializing in building immersive real-time
-          applications using Unity. My work spans AR, VR, and MR experiences
-          with a strong focus on performance, interaction design, and system architecture.
+  <main>
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">About</h2>
+      </div>
+      <div class="about">
+        <p class="about__lead">
+          I'm a game developer who spends equal time thinking about frame budgets and player feel.
         </p>
-        <p class="about-text">
-          I develop multiplayer systems, integrate AI-driven behaviors, and design scalable gameplay
-          and simulation frameworks.
+        <p>
+          Over the last <strong>7 years</strong> I've shipped Unity mobile games end to end —
+          gameplay systems, C# architecture, and the relentless optimization that keeps them running
+          smoothly on mid-range devices. For the past <strong>2 years</strong> I've focused on AR,
+          most recently building an <strong>HVAC training &amp; simulation app</strong> that lets
+          technicians practice on virtual equipment before touching the real thing.
+        </p>
+        <p>
+          I care about the details that make interactive experiences feel solid: responsive input,
+          honest performance, and interfaces that get out of the player's way.
         </p>
       </div>
-      <div class="about-highlight">
-        <ul>
-          <li>Unity-based XR development (AR / VR / MR)</li>
-          <li>Multiplayer & real-time networking concepts</li>
-          <li>AI-assisted gameplay & interaction systems</li>
-          <li>Performance-focused engineering mindset</li>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section class="section" id="work">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Featured Work</h2>
+      </div>
+
+      <div class="cards">
+        <!-- Card: AR HVAC -->
+        <article class="card card--feature">
+          <div class="card__media">
+            <span class="card__placeholder">AR&nbsp;·&nbsp;Screenshot</span>
+            <span class="card__tag">Featured</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">HVAC Training &amp; Simulation</h3>
+            <p class="card__desc">
+              An AR app for training HVAC technicians on virtual units — guided procedures,
+              component call-outs, and hands-on practice without the hardware.
+            </p>
+            <ul class="card__stack">
+              <li>Unity</li><li>AR Foundation</li><li>ARKit / ARCore</li><li>C#</li>
+            </ul>
+            <div class="card__links">
+              <a href="#" class="card__link">Case study →</a>
+              <a href="#" class="card__link">Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Game title 1 -->
+        <article class="card">
+          <div class="card__media">
+            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Game Title One</h3>
+            <p class="card__desc">
+              Short description of the game — genre, the core mechanic, and what you owned on it.
+            </p>
+            <ul class="card__stack">
+              <li>Unity</li><li>C#</li><li>Mobile</li>
+            </ul>
+            <div class="card__links">
+              <a href="#" class="card__link">App Store →</a>
+              <a href="#" class="card__link">Google Play →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Game title 2 -->
+        <article class="card">
+          <div class="card__media">
+            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Game Title Two</h3>
+            <p class="card__desc">
+              Short description — the interesting technical or design problem you solved here.
+            </p>
+            <ul class="card__stack">
+              <li>Unity</li><li>C#</li><li>Optimization</li>
+            </ul>
+            <div class="card__links">
+              <a href="#" class="card__link">View →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Game title 3 -->
+        <article class="card">
+          <div class="card__media">
+            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Game Title Three</h3>
+            <p class="card__desc">
+              Short description — a highlight, a metric, or what made this one worth featuring.
+            </p>
+            <ul class="card__stack">
+              <li>Unity</li><li>C#</li><li>Shaders</li>
+            </ul>
+            <div class="card__links">
+              <a href="#" class="card__link">View →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Skills</h2>
+      </div>
+
+      <div class="skills">
+        <div class="skills__group">
+          <h3 class="skills__label">Engine &amp; Languages</h3>
+          <ul class="chips">
+            <li>Unity</li><li>C#</li><li>.NET</li><li>Shader Graph</li><li>HLSL</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__label">AR / VR</h3>
+          <ul class="chips">
+            <li>AR Foundation</li><li>ARKit</li><li>ARCore</li><li>XR Interaction Toolkit</li><li>Spatial UX</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__label">Mobile &amp; Performance</h3>
+          <ul class="chips">
+            <li>Mobile optimization</li><li>Profiling</li><li>Memory management</li><li>Addressables</li><li>Build pipelines</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__label">Workflow</h3>
+          <ul class="chips">
+            <li>Git</li><li>CI/CD</li><li>Agile</li><li>Play testing</li><li>Analytics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__meta">
+            <span class="timeline__span">7 years</span>
+          </div>
+          <div class="timeline__content">
+            <h3>Unity Mobile Game Development</h3>
+            <p>
+              Built and shipped mobile games end to end — gameplay systems, C# architecture,
+              and deep performance work to hit smooth frame rates across a range of devices.
+            </p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__meta">
+            <span class="timeline__span">2 years</span>
+          </div>
+          <div class="timeline__content">
+            <h3>AR / VR Development</h3>
+            <p>
+              Focused on augmented reality, including an HVAC training and simulation app —
+              spatial UX, real-world tracking, and interactive guided procedures with AR Foundation.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <div class="contact">
+        <p class="contact__lead">
+          Open to Unity and AR/VR projects. Let's talk.
+        </p>
+        <a href="mailto:hello@abdulwahabxr.com" class="contact__email">hello@abdulwahabxr.com</a>
+        <ul class="contact__social">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">itch.io</a></li>
+          <li><a href="#">X / Twitter</a></li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects" class="section fade-in">
-    <div class="container">
-      <h3>Projects</h3>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h4>Multiplayer VR Experience</h4>
-          <p class="project-desc">
-            Real-time multiplayer VR application built in Unity with synchronized interactions and shared environments.
-          </p>
-          <p class="project-tech">Unity · VR · Networking · C#</p>
-          <a class="btn btn-outline" href="https://youtube.com/yourvideo1" target="_blank">Watch Video</a>
-        </div>
-        <div class="project-card">
-          <h4>AR Interactive System</h4>
-          <p class="project-desc">
-            Mobile AR experience focused on spatial interaction and real-world object alignment.
-          </p>
-          <p class="project-tech">Unity · AR · Mobile · XR Toolkit</p>
-          <a class="btn btn-outline" href="https://youtube.com/yourvideo2" target="_blank">Watch Video</a>
-        </div>
-        <div class="project-card">
-          <h4>AI-Driven Simulation</h4>
-          <p class="project-desc">
-            Intelligent agent behaviors using rule-based logic and AI-assisted decision-making inside immersive environments.
-          </p>
-          <p class="project-tech">Unity · AI · Simulation · C#</p>
-          <a class="btn btn-outline" href="https://youtube.com/yourvideo3" target="_blank">Watch Video</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Skills ===== -->
-  <section id="skills" class="section fade-in">
-    <div class="container">
-      <h3>Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h4>XR & Immersive</h4>
-          <ul>
-            <li>AR / VR / MR</li>
-            <li>XR Interaction Design</li>
-            <li>Spatial Computing</li>
-            <li>Device Integration</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <h4>Engine & Tools</h4>
-          <ul>
-            <li>Unity Engine</li>
-            <li>C# Programming</li>
-            <li>XR Toolkit</li>
-            <li>Shader Basics</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <h4>Multiplayer & Systems</h4>
-          <ul>
-            <li>Real-time Networking</li>
-            <li>State Synchronization</li>
-            <li>Client / Server Concepts</li>
-            <li>Performance Optimization</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <h4>AI & Logic</h4>
-          <ul>
-            <li>Agent Behaviors</li>
-            <li>Rule-Based Systems</li>
-            <li>AI-Assisted Gameplay</li>
-            <li>Simulation Logic</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section id="contact" class="section fade-in">
-    <div class="container contact-grid">
-      <h3>Contact</h3>
-      <p class="contact-text">
-        Interested in collaborating or discussing XR projects? Reach out via email or LinkedIn.
-      </p>
-      <div class="contact-links">
-        <a class="btn" href="mailto:abdulwahab.xr@gmail.com">Email Me</a>
-        <a class="btn btn-outline" href="https://www.linkedin.com/in/abdulwahabxr" target="_blank">LinkedIn</a>
-        <a class="btn btn-outline" href="https://github.com/abdulwahabxr" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="footer fade-in">
-    <p>© 2026 ABDUL WAHAB | XR Engineer Tech</p>
+  <footer class="footer">
+    <span>© <span id="year"></span> Abdul Wahab</span>
+    <span class="footer__note">Built with static HTML/CSS/JS · Hosted on GitHub Pages</span>
   </footer>
 
-  <!-- ===== Scroll to Top ===== -->
-  <button id="scroll-top-btn">↑</button>
-
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
