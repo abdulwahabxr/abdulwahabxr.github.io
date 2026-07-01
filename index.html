@@ -3,820 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdul Wahab — Unity Developer &amp; AR Specialist</title>
-  <meta name="description" content="Abdul Wahab — Unity mobile game developer with 7 years of experience and an AR/VR specialist building immersive training and simulation apps." />
+  <title>Abdul Wahab — Coming Soon</title>
+  <meta name="description" content="Abdul Wahab — Unity Developer & AR Specialist. Portfolio coming soon." />
   <meta name="theme-color" content="#0a0d0a" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Abdul Wahab — Unity Developer &amp; AR Specialist" />
-  <meta property="og:description" content="7 years of Unity mobile game development · 2 years building AR training &amp; simulation experiences." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abdulwahabxr.com" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-/* ============================================================
-   Abdul Wahab — Portfolio
-   Dark theme · neon-green accent · "Unity editor / dev console"
-   ============================================================ */
-
-:root {
-  --bg:        #0a0d0a;
-  --bg-2:      #101510;
-  --surface:   #131813;
-  --surface-2: #171d17;
-  --line:      #26301f;
-  --text:      #e8eee6;
-  --muted:     #93a08d;
-  --accent:    #4dff88;
-  --accent-dim:#2fae5f;
-  --accent-glow: rgba(77, 255, 136, 0.18);
-
-  --font-display: "Space Grotesk", system-ui, sans-serif;
-  --font-body:    "Inter", system-ui, sans-serif;
-  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
-
-  --maxw: 1120px;
-  --radius: 14px;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-a { color: inherit; text-decoration: none; }
-
-::selection { background: var(--accent); color: #06120a; }
-
-/* ---------- Nav ---------- */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px clamp(20px, 5vw, 48px);
-  background: rgba(10, 13, 10, 0.72);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav__brand {
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
-}
-.nav__bracket { color: var(--accent); }
-
-.nav__links {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 3vw, 34px);
-  font-family: var(--font-mono);
-  font-size: 0.86rem;
-}
-.nav__links a { color: var(--muted); transition: color 0.2s var(--ease); }
-.nav__links a:hover { color: var(--text); }
-
-.nav__cta {
-  color: var(--accent) !important;
-  border: 1px solid var(--accent-dim);
-  padding: 7px 16px;
-  border-radius: 999px;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
-}
-.nav__cta:hover { background: var(--accent); color: #06120a !important; }
-
-.nav__toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 6px;
-}
-.nav__toggle span {
-  width: 24px; height: 2px;
-  background: var(--text);
-  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
-}
-
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
-  padding: 80px clamp(20px, 5vw, 48px);
-  overflow: hidden;
-}
-
-.hero__grid {
-  position: absolute;
-  inset: -2px;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 46px 46px;
-  mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 0%, transparent 78%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, #000 0%, transparent 78%);
-  opacity: 0.55;
-  animation: gridDrift 24s linear infinite;
-}
-@keyframes gridDrift {
-  from { background-position: 0 0, 0 0; }
-  to   { background-position: 46px 46px, 46px 46px; }
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: -20%; right: -10%;
-  width: 520px; height: 520px;
-  background: radial-gradient(circle, var(--accent-glow), transparent 68%);
-  filter: blur(20px);
-  pointer-events: none;
-}
-
-.hero__inner { position: relative; max-width: var(--maxw); width: 100%; margin: 0 auto; }
-
-.hero__eyebrow {
-  font-family: var(--font-mono);
-  color: var(--accent);
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 18px;
-}
-
-.hero__name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2.8rem, 9vw, 6rem);
-  line-height: 0.98;
-  letter-spacing: -0.02em;
-}
-
-.hero__title {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: clamp(0.95rem, 2.2vw, 1.25rem);
-  color: var(--text);
-  margin-top: 18px;
-}
-.hero__pipe { color: var(--accent); }
-
-.hero__tagline {
-  max-width: 560px;
-  color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.12rem);
-  margin-top: 22px;
-}
-
-.hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
-
-.btn {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  padding: 13px 26px;
-  border-radius: 999px;
-  transition: transform 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease);
-  display: inline-block;
-}
-.btn--primary {
-  background: var(--accent);
-  color: #06120a;
-  font-weight: 600;
-  box-shadow: 0 0 0 rgba(77,255,136,0);
-}
-.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px var(--accent-glow); }
-.btn--ghost { border: 1px solid var(--line); color: var(--text); }
-.btn--ghost:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
-
-.hero__stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(28px, 6vw, 64px);
-  margin-top: 54px;
-  list-style: none;
-}
-.hero__stats li { display: flex; flex-direction: column; }
-.stat__num {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  color: var(--accent);
-  line-height: 1;
-}
-.stat__label {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-top: 6px;
-}
-
-/* ---------- Sections ---------- */
-.section {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: clamp(70px, 12vw, 130px) clamp(20px, 5vw, 48px);
-  border-top: 1px solid var(--line);
-}
-
-.section__head {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 44px;
-}
-.section__index {
-  font-family: var(--font-mono);
-  color: var(--accent);
-  font-size: 0.9rem;
-}
-.section__title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.7rem, 4vw, 2.6rem);
-  letter-spacing: -0.01em;
-}
-
-/* ---------- About ---------- */
-.about { max-width: 720px; display: flex; flex-direction: column; gap: 20px; }
-.about__lead {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
-  line-height: 1.4;
-  color: var(--text);
-}
-.about p { color: var(--muted); }
-.about strong { color: var(--text); font-weight: 600; }
-
-/* ---------- Cards ---------- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 22px;
-}
-.card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: transform 0.28s var(--ease), border-color 0.28s var(--ease), box-shadow 0.28s var(--ease);
-  display: flex;
-  flex-direction: column;
-}
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-dim);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
-}
-.card--feature { grid-column: span 2; }
-
-.card__media {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  background:
-    repeating-linear-gradient(45deg, var(--surface-2) 0 12px, var(--bg-2) 12px 24px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--line);
-}
-.card__placeholder {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-.card__tag {
-  position: absolute;
-  top: 12px; left: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: #06120a;
-  background: var(--accent);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-
-.card__body { padding: 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
-.card__title { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; }
-.card__desc { color: var(--muted); font-size: 0.94rem; }
-
-.card__stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-  margin-top: auto;
-}
-.card__stack li {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 3px 9px;
-  border-radius: 6px;
-}
-.card__links { display: flex; flex-wrap: wrap; gap: 16px; padding-top: 6px; }
-.card__link {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--accent);
-  transition: opacity 0.2s var(--ease);
-}
-.card__link:hover { opacity: 0.7; }
-
-/* ---------- Skills ---------- */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 28px;
-}
-.skills__label {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--accent);
-  margin-bottom: 14px;
-  letter-spacing: 0.02em;
-}
-.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
-.chips li {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  padding: 7px 13px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  color: var(--text);
-  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
-}
-.chips li:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
-
-/* ---------- Timeline ---------- */
-.timeline { list-style: none; position: relative; padding-left: 28px; max-width: 760px; }
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 6px; top: 6px; bottom: 6px;
-  width: 1px;
-  background: linear-gradient(var(--accent-dim), var(--line));
-}
-.timeline__item { position: relative; padding-bottom: 44px; }
-.timeline__item:last-child { padding-bottom: 0; }
-.timeline__dot {
-  position: absolute;
-  left: -28px; top: 6px;
-  width: 13px; height: 13px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--bg), 0 0 14px var(--accent-glow);
-}
-.timeline__span {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-}
-.timeline__content h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin: 6px 0 8px;
-}
-.timeline__content p { color: var(--muted); font-size: 0.95rem; max-width: 640px; }
-
-/* ---------- Contact ---------- */
-.section--contact { border-bottom: 1px solid var(--line); }
-.contact { display: flex; flex-direction: column; gap: 22px; }
-.contact__lead {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3.5vw, 2rem);
-  max-width: 520px;
-}
-.contact__email {
-  font-family: var(--font-mono);
-  font-size: clamp(1.05rem, 3vw, 1.5rem);
-  color: var(--accent);
-  width: fit-content;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s var(--ease);
-}
-.contact__email:hover { border-color: var(--accent); }
-.contact__social { display: flex; flex-wrap: wrap; gap: 22px; list-style: none; }
-.contact__social a {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--muted);
-  transition: color 0.2s var(--ease);
-}
-.contact__social a:hover { color: var(--text); }
-
-/* ---------- Footer ---------- */
-.footer {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 28px clamp(20px, 5vw, 48px);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--muted);
-}
-
-/* ---------- Reveal animation ---------- */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: none; }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 760px) {
-  .nav__links {
-    position: fixed;
-    inset: 62px 0 auto 0;
-    flex-direction: column;
-    background: var(--bg-2);
-    border-bottom: 1px solid var(--line);
-    padding: 24px clamp(20px, 5vw, 48px) 30px;
-    gap: 22px;
-    transform: translateY(-120%);
-    transition: transform 0.3s var(--ease);
-  }
-  .nav__links.is-open { transform: none; }
-  .nav__toggle { display: flex; }
-  .card--feature { grid-column: span 1; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
-
+    :root{
+      --bg:#0a0d0a; --text:#e8eee6; --muted:#93a08d;
+      --accent:#4dff88; --accent-dim:#2fae5f;
+      --line:#26301f; --glow:rgba(77,255,136,.18);
+      --mono:"JetBrains Mono",ui-monospace,monospace;
+      --display:"Space Grotesk",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;background:var(--bg);color:var(--text);
+      font-family:var(--display);display:flex;align-items:center;justify-content:center;
+      padding:32px;overflow:hidden;position:relative;-webkit-font-smoothing:antialiased;
+    }
+    .grid{
+      position:absolute;inset:-2px;
+      background-image:
+        linear-gradient(var(--line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--line) 1px,transparent 1px);
+      background-size:46px 46px;opacity:.5;
+      mask-image:radial-gradient(ellipse 65% 60% at 50% 45%,#000,transparent 78%);
+      -webkit-mask-image:radial-gradient(ellipse 65% 60% at 50% 45%,#000,transparent 78%);
+      animation:drift 24s linear infinite;
+    }
+    @keyframes drift{to{background-position:46px 46px,46px 46px}}
+    .glow{
+      position:absolute;top:-15%;left:50%;transform:translateX(-50%);
+      width:600px;height:600px;pointer-events:none;
+      background:radial-gradient(circle,var(--glow),transparent 68%);filter:blur(20px);
+    }
+    .wrap{position:relative;text-align:center;max-width:640px}
+    .eyebrow{
+      font-family:var(--mono);color:var(--accent);font-size:.85rem;
+      letter-spacing:.02em;margin-bottom:22px;
+    }
+    .eyebrow .cursor{display:inline-block;width:9px;height:1.05em;background:var(--accent);
+      margin-left:4px;vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    h1{
+      font-weight:700;font-size:clamp(2.4rem,9vw,4.6rem);line-height:1.02;
+      letter-spacing:-.02em;margin-bottom:20px;
+    }
+    h1 .accent{color:var(--accent)}
+    .name{
+      font-family:var(--mono);font-size:clamp(.95rem,3vw,1.2rem);
+      color:var(--text);margin-bottom:10px;
+    }
+    .role{font-family:var(--mono);color:var(--muted);font-size:.9rem;margin-bottom:34px}
+    .role .pipe{color:var(--accent)}
+    .bar{
+      max-width:340px;margin:0 auto 34px;height:6px;border-radius:999px;
+      background:#141a13;border:1px solid var(--line);overflow:hidden;
+    }
+    .bar span{
+      display:block;height:100%;width:62%;border-radius:999px;
+      background:linear-gradient(90deg,var(--accent-dim),var(--accent));
+      box-shadow:0 0 12px var(--glow);animation:load 2.6s cubic-bezier(.22,1,.36,1) forwards}
+    @keyframes load{from{width:0}to{width:62%}}
+    .contact{font-family:var(--mono);font-size:.88rem;color:var(--muted)}
+    .contact a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+    .contact a:hover{border-color:var(--accent)}
+    @media(prefers-reduced-motion:reduce){
+      *{animation:none!important}
+      .bar span{width:62%}
+    }
   </style>
 </head>
 <body>
-  <!-- ===== NAV ===== -->
-  <header class="nav" id="top">
-    <a href="#top" class="nav__brand">
-      <span class="nav__bracket">[</span>AW<span class="nav__bracket">]</span>
-    </a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact" class="nav__cta">Contact</a>
-    </nav>
-    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
+  <div class="grid" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero__grid" aria-hidden="true"></div>
-    <div class="hero__inner">
-      <p class="hero__eyebrow">// initializing build&hellip;</p>
-      <h1 class="hero__name">Abdul&nbsp;Wahab</h1>
-      <p class="hero__title">
-        <span>Unity Developer</span>
-        <span class="hero__pipe">|</span>
-        <span>AR Specialist</span>
-      </p>
-      <p class="hero__tagline">
-        I build performant mobile games and immersive AR/VR experiences —
-        from twitchy game loops to real-world training simulations.
-      </p>
-      <div class="hero__actions">
-        <a href="#work" class="btn btn--primary">View Work</a>
-        <a href="#contact" class="btn btn--ghost">Get in touch</a>
-      </div>
-      <ul class="hero__stats" aria-label="Highlights">
-        <li><span class="stat__num" data-count="7">0</span><span class="stat__label">yrs Unity dev</span></li>
-        <li><span class="stat__num" data-count="2">0</span><span class="stat__label">yrs AR/VR</span></li>
-        <li><span class="stat__num" data-count="10" data-suffix="+">0</span><span class="stat__label">shipped titles</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <main>
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <div class="section__head">
-        <span class="section__index">01</span>
-        <h2 class="section__title">About</h2>
-      </div>
-      <div class="about">
-        <p class="about__lead">
-          I'm a game developer who spends equal time thinking about frame budgets and player feel.
-        </p>
-        <p>
-          Over the last <strong>7 years</strong> I've shipped Unity mobile games end to end —
-          gameplay systems, C# architecture, and the relentless optimization that keeps them running
-          smoothly on mid-range devices. For the past <strong>2 years</strong> I've focused on AR,
-          most recently building an <strong>HVAC training &amp; simulation app</strong> that lets
-          technicians practice on virtual equipment before touching the real thing.
-        </p>
-        <p>
-          I care about the details that make interactive experiences feel solid: responsive input,
-          honest performance, and interfaces that get out of the player's way.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== WORK ===== -->
-    <section class="section" id="work">
-      <div class="section__head">
-        <span class="section__index">02</span>
-        <h2 class="section__title">Featured Work</h2>
-      </div>
-
-      <div class="cards">
-        <!-- Card: AR HVAC -->
-        <article class="card card--feature">
-          <div class="card__media">
-            <span class="card__placeholder">AR&nbsp;·&nbsp;Screenshot</span>
-            <span class="card__tag">Featured</span>
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">HVAC Training &amp; Simulation</h3>
-            <p class="card__desc">
-              An AR app for training HVAC technicians on virtual units — guided procedures,
-              component call-outs, and hands-on practice without the hardware.
-            </p>
-            <ul class="card__stack">
-              <li>Unity</li><li>AR Foundation</li><li>ARKit / ARCore</li><li>C#</li>
-            </ul>
-            <div class="card__links">
-              <a href="#" class="card__link">Case study →</a>
-              <a href="#" class="card__link">Demo →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: Game title 1 -->
-        <article class="card">
-          <div class="card__media">
-            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Game Title One</h3>
-            <p class="card__desc">
-              Short description of the game — genre, the core mechanic, and what you owned on it.
-            </p>
-            <ul class="card__stack">
-              <li>Unity</li><li>C#</li><li>Mobile</li>
-            </ul>
-            <div class="card__links">
-              <a href="#" class="card__link">App Store →</a>
-              <a href="#" class="card__link">Google Play →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: Game title 2 -->
-        <article class="card">
-          <div class="card__media">
-            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Game Title Two</h3>
-            <p class="card__desc">
-              Short description — the interesting technical or design problem you solved here.
-            </p>
-            <ul class="card__stack">
-              <li>Unity</li><li>C#</li><li>Optimization</li>
-            </ul>
-            <div class="card__links">
-              <a href="#" class="card__link">View →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: Game title 3 -->
-        <article class="card">
-          <div class="card__media">
-            <span class="card__placeholder">Game&nbsp;·&nbsp;Cover</span>
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">Game Title Three</h3>
-            <p class="card__desc">
-              Short description — a highlight, a metric, or what made this one worth featuring.
-            </p>
-            <ul class="card__stack">
-              <li>Unity</li><li>C#</li><li>Shaders</li>
-            </ul>
-            <div class="card__links">
-              <a href="#" class="card__link">View →</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section class="section" id="skills">
-      <div class="section__head">
-        <span class="section__index">03</span>
-        <h2 class="section__title">Skills</h2>
-      </div>
-
-      <div class="skills">
-        <div class="skills__group">
-          <h3 class="skills__label">Engine &amp; Languages</h3>
-          <ul class="chips">
-            <li>Unity</li><li>C#</li><li>.NET</li><li>Shader Graph</li><li>HLSL</li>
-          </ul>
-        </div>
-        <div class="skills__group">
-          <h3 class="skills__label">AR / VR</h3>
-          <ul class="chips">
-            <li>AR Foundation</li><li>ARKit</li><li>ARCore</li><li>XR Interaction Toolkit</li><li>Spatial UX</li>
-          </ul>
-        </div>
-        <div class="skills__group">
-          <h3 class="skills__label">Mobile &amp; Performance</h3>
-          <ul class="chips">
-            <li>Mobile optimization</li><li>Profiling</li><li>Memory management</li><li>Addressables</li><li>Build pipelines</li>
-          </ul>
-        </div>
-        <div class="skills__group">
-          <h3 class="skills__label">Workflow</h3>
-          <ul class="chips">
-            <li>Git</li><li>CI/CD</li><li>Agile</li><li>Play testing</li><li>Analytics</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPERIENCE ===== -->
-    <section class="section" id="experience">
-      <div class="section__head">
-        <span class="section__index">04</span>
-        <h2 class="section__title">Experience</h2>
-      </div>
-
-      <ol class="timeline">
-        <li class="timeline__item">
-          <span class="timeline__dot" aria-hidden="true"></span>
-          <div class="timeline__meta">
-            <span class="timeline__span">7 years</span>
-          </div>
-          <div class="timeline__content">
-            <h3>Unity Mobile Game Development</h3>
-            <p>
-              Built and shipped mobile games end to end — gameplay systems, C# architecture,
-              and deep performance work to hit smooth frame rates across a range of devices.
-            </p>
-          </div>
-        </li>
-        <li class="timeline__item">
-          <span class="timeline__dot" aria-hidden="true"></span>
-          <div class="timeline__meta">
-            <span class="timeline__span">2 years</span>
-          </div>
-          <div class="timeline__content">
-            <h3>AR / VR Development</h3>
-            <p>
-              Focused on augmented reality, including an HVAC training and simulation app —
-              spatial UX, real-world tracking, and interactive guided procedures with AR Foundation.
-            </p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section section--contact" id="contact">
-      <div class="section__head">
-        <span class="section__index">05</span>
-        <h2 class="section__title">Contact</h2>
-      </div>
-      <div class="contact">
-        <p class="contact__lead">
-          Open to Unity and AR/VR projects. Let's talk.
-        </p>
-        <a href="mailto:hello@abdulwahabxr.com" class="contact__email">hello@abdulwahabxr.com</a>
-        <ul class="contact__social">
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">itch.io</a></li>
-          <li><a href="#">X / Twitter</a></li>
-        </ul>
-      </div>
-    </section>
+  <main class="wrap">
+    <p class="eyebrow">// building<span class="cursor"></span></p>
+    <h1>Under<br><span class="accent">Construction</span></h1>
+    <p class="name">Abdul Wahab</p>
+    <p class="role">Enterprise XR Developer <span class="pipe">(</span>AR/VR<span class="pipe">)</span></p>
+    <p class="role" style="margin-top:-24px">Unity <span class="pipe">·</span> Meta Quest <span class="pipe">·</span> Training &amp; Simulation</p>
+    <div class="bar" aria-hidden="true"><span></span></div>
+    <p class="contact">
+      Portfolio launching soon —
+      <a href="mailto:hello@abdulwahabxr.com">hello@abdulwahabxr.com</a>
+    </p>
   </main>
-
-  <footer class="footer">
-    <span>© <span id="year"></span> Abdul Wahab</span>
-    <span class="footer__note">Built with static HTML/CSS/JS · Hosted on GitHub Pages</span>
-  </footer>
-
-  <script>
-/* Portfolio interactions — kept minimal and dependency-free */
-
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Mobile nav toggle
-const toggle = document.querySelector(".nav__toggle");
-const links = document.querySelector(".nav__links");
-if (toggle && links) {
-  toggle.addEventListener("click", () => {
-    const open = links.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
-  });
-  links.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => {
-      links.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-    })
-  );
-}
-
-// Respect reduced motion
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-// Scroll reveal
-const revealEls = document.querySelectorAll(
-  ".section, .card, .hero__inner"
-);
-revealEls.forEach((el) => el.classList.add("reveal"));
-
-if (!reduceMotion && "IntersectionObserver" in window) {
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  revealEls.forEach((el) => io.observe(el));
-} else {
-  revealEls.forEach((el) => el.classList.add("is-visible"));
-}
-
-// Animated stat counters
-function runCounters() {
-  document.querySelectorAll(".stat__num").forEach((el) => {
-    const target = parseInt(el.dataset.count, 10);
-    const suffix = el.dataset.suffix || "";
-    if (reduceMotion) {
-      el.textContent = target + suffix;
-      return;
-    }
-    const duration = 1100;
-    const start = performance.now();
-    function tick(now) {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  });
-}
-
-// Trigger counters once hero is in view
-const hero = document.querySelector(".hero__stats");
-if (hero && "IntersectionObserver" in window) {
-  const heroIO = new IntersectionObserver(
-    (entries) => {
-      if (entries[0].isIntersecting) {
-        runCounters();
-        heroIO.disconnect();
-      }
-    },
-    { threshold: 0.4 }
-  );
-  heroIO.observe(hero);
-} else {
-  runCounters();
-}
-
-  </script>
 </body>
 </html>
