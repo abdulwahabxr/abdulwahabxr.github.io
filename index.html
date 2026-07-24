@@ -1239,24 +1239,13 @@
   document.querySelectorAll('section[id]').forEach(function (s) { so.observe(s); });
 
   /* Contact form composes an email */
+  /* Contact form with Formspree */
   document.getElementById('cform').addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!this.reportValidity()) return;
-    var name = document.getElementById('fn').value.trim();
-    var company = document.getElementById('fc').value.trim();
-    var ind = document.getElementById('fi').value;
-    var budget = document.getElementById('fb').value;
-    var msg = document.getElementById('fm').value.trim();
-    var subject = encodeURIComponent('XR training inquiry: ' + (company || name));
-    var body = encodeURIComponent([
-      'Name: ' + name,
-      company ? 'Company: ' + company : '',
-      ind ? 'Industry: ' + ind : '',
-      budget ? 'Budget: ' + budget : '',
-      '',
-      msg
-    ].filter(Boolean).join('\n'));
-    window.location.href = 'mailto:abdul_wahab789@hotmail.com?subject=' + subject + '&body=' + body;
+    // Let Formspree handle submission natively
+    // Form will POST to Formspree, then redirect or show success
+    var btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
   });
 
   /* ==========================================================
